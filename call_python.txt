@@ -1,0 +1,15 @@
+gfortran call_python.f -ffree-form -o callpython
+ian@ian-Latitude-3190-2-in-1:~$ ./callpython
+hello world
+2
+ian@ian-Latitude-3190-2-in-1:~$ cat hello.py
+print("hello world")
+print(1+1)
+ian@ian-Latitude-3190-2-in-1:~$ cat call_python.f
+PROGRAM CallPython
+    IMPLICIT NONE
+
+    CALL SYSTEM("python3 hello.py")
+
+END PROGRAM CallPython
+ian@ian-Latitude-3190-2-in-1:~$
