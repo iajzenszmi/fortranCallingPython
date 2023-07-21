@@ -1,6 +1,6 @@
-PROGRAM CallPython
-    IMPLICIT NONE
+      PROGRAM CallPython
+      IMPLICIT NONE
 
-    CALL SYSTEM("python3 hello.py")
+       CALL EXECUTE_COMMAND_LINE("python3 hello.py")
 
-END PROGRAM CallPython
+       END PROGRAM CallPython
